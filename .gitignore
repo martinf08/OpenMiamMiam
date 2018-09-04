@@ -6,7 +6,7 @@
 /bin/
 /build/
 /composer.phar
-/vendor/
+!/vendor/Isics/
 /web/bundles/
 /web/uploads/
 /web/media/
