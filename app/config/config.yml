@@ -149,8 +149,8 @@ assetic:
     filters:
         cssrewrite: ~
         less:
-            node:       %node_path%
-            node_paths: [%node_path%, %node_modules_path%]
+            node:       '/usr/bin/node'
+            node_paths: [/usr/local/lib/node_modules]
             apply_to:   "\.less$"
         uglifycss:
             bin: %node_uglifycss_bin%
