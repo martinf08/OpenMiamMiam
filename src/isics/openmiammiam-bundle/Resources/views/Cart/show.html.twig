@@ -1,0 +1,29 @@
+{#
+ # This file is part of the OpenMiamMiam project.
+ # (c) Isics <contact@isics.fr>
+ #
+ # This source file is subject to the AGPL v3 license that is bundled
+ # with this source code in the file LICENSE.
+ #}
+{% embed 'IsicsOpenMiamMiamBundle:Branch:base.html.twig' with {'branch': branch} %}
+    {% block title %}{{ 'cart.title'|trans({'%branch_name%': branch.name}, 'seo') }}{% endblock %}
+    {% block meta_description %}{{ 'cart.meta_description'|trans({'%branch_name%': branch.name}, 'seo') }}{% endblock %}
+
+    {% block content %}
+        <h1>{{ 'cart.title'|trans }}</h1>
+
+        <div id="cart">
+            {% include 'IsicsOpenMiamMiamBundle:Cart:cart.html.twig' %}
+        </div>
+    {% endblock %}
+
+    {% block javascript %}
+        {{ parent() }}
+        <script type="text/javascript">
+            $(function() {
+                new OpenMiamMiam.Quantity;
+                new OpenMiamMiam.CartUpdateForm;
+            });
+        </script>
+    {% endblock %}
+{% endembed %}
