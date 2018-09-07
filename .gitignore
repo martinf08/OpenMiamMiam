@@ -7,7 +7,6 @@
 /build/
 /composer.phar
 !/vendor/isics/
-/vendor/
 /web/bundles/
 /web/uploads/
 /web/media/
